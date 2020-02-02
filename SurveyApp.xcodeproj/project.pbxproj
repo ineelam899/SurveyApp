@@ -12,7 +12,9 @@
 		29A7DE3D66D765AD94F0E0D2 /* Pods_SurveyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6EA5EFFE1C3FC5E0EA7C04F /* Pods_SurveyApp.framework */; };
 		9D389C4423E4664400E58209 /* TakeSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C4323E4664400E58209 /* TakeSurveyViewController.swift */; };
 		9D389C4B23E6DA7100E58209 /* OAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C4A23E6DA7100E58209 /* OAuthModel.swift */; };
-		9DA497E323E1DBB500C77592 /* SurveyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA497E223E1DBB500C77592 /* SurveyAppTests.swift */; };
+		9D389C4E23E6F21500E58209 /* SurveyListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C4D23E6F21500E58209 /* SurveyListViewModelTests.swift */; };
+		9D389C5023E6F22E00E58209 /* SurveyModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C4F23E6F22E00E58209 /* SurveyModelMock.swift */; };
+		9D389C5223E6F23800E58209 /* SurveyServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C5123E6F23800E58209 /* SurveyServiceMock.swift */; };
 		9DA497EE23E1DBB500C77592 /* SurveyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA497ED23E1DBB500C77592 /* SurveyAppUITests.swift */; };
 		9DA4980923E1DEDF00C77592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA497FD23E1DEDF00C77592 /* Assets.xcassets */; };
 		9DA4980A23E1DEDF00C77592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA497FE23E1DEDF00C77592 /* LaunchScreen.storyboard */; };
@@ -57,10 +59,12 @@
 		841850AD23AFF31AACF7D13B /* Pods-SurveyAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyAppTests.release.xcconfig"; path = "Target Support Files/Pods-SurveyAppTests/Pods-SurveyAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		9D389C4323E4664400E58209 /* TakeSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeSurveyViewController.swift; sourceTree = "<group>"; };
 		9D389C4A23E6DA7100E58209 /* OAuthModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthModel.swift; sourceTree = "<group>"; };
+		9D389C4D23E6F21500E58209 /* SurveyListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListViewModelTests.swift; sourceTree = "<group>"; };
+		9D389C4F23E6F22E00E58209 /* SurveyModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyModelMock.swift; sourceTree = "<group>"; };
+		9D389C5123E6F23800E58209 /* SurveyServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyServiceMock.swift; sourceTree = "<group>"; };
 		9DA497C823E1DBB100C77592 /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA497D923E1DBB400C77592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA497DE23E1DBB500C77592 /* SurveyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9DA497E223E1DBB500C77592 /* SurveyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppTests.swift; sourceTree = "<group>"; };
 		9DA497E423E1DBB500C77592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA497E923E1DBB500C77592 /* SurveyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA497ED23E1DBB500C77592 /* SurveyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppUITests.swift; sourceTree = "<group>"; };
@@ -135,6 +139,15 @@
 			path = TakeSurvey;
 			sourceTree = "<group>";
 		};
+		9D389C4C23E6F1D700E58209 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9D389C5123E6F23800E58209 /* SurveyServiceMock.swift */,
+				9D389C4F23E6F22E00E58209 /* SurveyModelMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		9DA497BF23E1DBB100C77592 = {
 			isa = PBXGroup;
 			children = (
@@ -175,7 +188,8 @@
 		9DA497E123E1DBB500C77592 /* SurveyAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				9DA497E223E1DBB500C77592 /* SurveyAppTests.swift */,
+				9D389C4C23E6F1D700E58209 /* Mocks */,
+				9D389C4D23E6F21500E58209 /* SurveyListViewModelTests.swift */,
 				9DA497E423E1DBB500C77592 /* Info.plist */,
 			);
 			path = SurveyAppTests;
@@ -371,6 +385,7 @@
 					};
 					9DA497DD23E1DBB500C77592 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 						TestTargetID = 9DA497C723E1DBB100C77592;
 					};
 					9DA497E823E1DBB500C77592 = {
@@ -557,7 +572,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DA497E323E1DBB500C77592 /* SurveyAppTests.swift in Sources */,
+				9D389C4E23E6F21500E58209 /* SurveyListViewModelTests.swift in Sources */,
+				9D389C5023E6F22E00E58209 /* SurveyModelMock.swift in Sources */,
+				9D389C5223E6F23800E58209 /* SurveyServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,6 +779,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SurveyAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -772,6 +790,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.org.neelam.SurveyAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SurveyApp.app/SurveyApp";
@@ -784,6 +803,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SurveyAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
