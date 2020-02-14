@@ -11,24 +11,20 @@ import UIKit
 
 class SurveyServiceMock: SurveyServiceProtocol {
 
-    let mockObj: SurveyResponseMock
-    init(mock: SurveyResponseMock) {
+    let mockObj: [SurveyMock]
+    init(mock: [SurveyMock]) {
         mockObj = mock
     }
     
-    func getSurveysList(completion: @escaping (APIResult<SurveyResponse>) -> Void) {
-        completion(APIResult.success(mockObj))
+    func getSurveysList(completion: @escaping (Result<[Survey], NetworkError>) -> Void) {
+        completion(.success(mockObj))
     }
-    
-    func getOAuthToken(completion: @escaping (APIResult<OAuth>) -> Void) {}
 }
 
 class SurveyServiceMockError: SurveyServiceProtocol {
     
     init() {}
-    func getSurveysList(completion: @escaping (APIResult<SurveyResponse>) -> Void) {
-        completion(APIResult.error("Mock error"))
+    func getSurveysList(completion: @escaping (Result<[Survey], NetworkError>) -> Void) {
+        completion(.failure(.generic(NSError(domain: "Mock error", code: 401, userInfo: nil))))
     }
-    
-    func getOAuthToken(completion: @escaping (APIResult<OAuth>) -> Void) {}
 }
