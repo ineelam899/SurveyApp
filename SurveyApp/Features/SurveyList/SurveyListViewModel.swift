@@ -18,7 +18,7 @@ class SurveyListViewModel {
     var surveyListUpdatedBlock: (()->Void)? = nil
     
     /// Error hook for ViewController
-    var errorBlock: ((String)->Void)? = nil
+    var errorBlock: ((NetworkError)->Void)? = nil
     
     init(surveyService: SurveyServiceProtocol) {
         self.surveyService = surveyService
@@ -41,8 +41,8 @@ class SurveyListViewModel {
             case .success(let surveyAPIModel):
                 self?.surveys = surveyAPIModel.surveys
                 self?.surveyListUpdatedBlock?()
-            case .error(let message):
-                self?.errorBlock?(message)
+            case .failure(let error):
+                self?.errorBlock?(error)
             }
         }
     }
@@ -54,8 +54,8 @@ class SurveyListViewModel {
                 let authentication = "\(oauthAPIModel.tokenType) \(oauthAPIModel.accessToken)"
                 KeychainWrapper.standard.set(authentication, forKey: HTTPHeaderField.authentication.rawValue)
                 self?.getSurveysList()
-            case .error(let message):
-                self?.errorBlock?(message)
+            case .failure(let error):
+                self?.errorBlock?(error)
             }
         }
     }

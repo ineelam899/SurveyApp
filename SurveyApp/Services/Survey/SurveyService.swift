@@ -9,8 +9,8 @@
 import Foundation
 
 protocol SurveyServiceProtocol {
-    func getSurveysList(completion: @escaping (APIResult<SurveyResponse>)-> Void)
-    func getOAuthToken(completion: @escaping (APIResult<OAuth>)-> Void)
+    func getSurveysList(completion: @escaping (Result<SurveyResponse, NetworkError>)-> Void)
+    func getOAuthToken(completion: @escaping (Result<OAuth, NetworkError>)-> Void)
 }
 
 class SurveyService: SurveyServiceProtocol {
@@ -20,25 +20,25 @@ class SurveyService: SurveyServiceProtocol {
         self.networkManager = networkManager
     }
     
-    func getSurveysList(completion: @escaping (APIResult<SurveyResponse>)-> Void) {
+    func getSurveysList(completion: @escaping (Result<SurveyResponse, NetworkError>)-> Void) {
         let router: APIRouter = .surveyList
-        networkManager.requestObject(router) { (data: Data?, error: String?) in
+        networkManager.requestObject(router) { (data: Data?, error: Error?) in
             guard let data = data, let surveys = try? JSONDecoder().decode([Survey].self, from: data) else {
-                completion(APIResult.error(error ?? "JSON parsing issue occurred."))
+                completion(.failure(.badJSON))
                 return
             }
-            completion(APIResult.success(SurveyResponse.init(surveys: surveys)))
+            completion(.success(SurveyResponse.init(surveys: surveys)))
         }
     }
     
-    func getOAuthToken(completion: @escaping (APIResult<OAuth>)-> Void) {
+    func getOAuthToken(completion: @escaping (Result<OAuth, NetworkError>)-> Void) {
         let router: APIRouter = .oAuth(username: "carlos@nimbl3.com", password: "antikera", grantType:"password")
-        networkManager.requestObject(router) { (data: Data?, error: String?) in
+        networkManager.requestObject(router) { (data: Data?, error: Error?) in
              guard let data = data, let oauth = try? JSONDecoder().decode(OAuth.self, from: data) else {
-                completion(APIResult.error(error ?? "JSON parsing issue occurred."))
+                completion(.failure(.badJSON))
                 return
             }
-            completion(APIResult.success(oauth))
+            completion(.success(oauth))
         }
     }
 }

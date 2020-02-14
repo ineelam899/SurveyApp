@@ -40,10 +40,10 @@ class SurveyListViewController: UIViewController, NVActivityIndicatorViewable {
                 self?.tableView.reloadData()
             }
         }
-        viewModel.errorBlock = { [weak self] message in
+        viewModel.errorBlock = { [weak self] error in
             DispatchQueue.main.async {
                 self?.stopAnimating()
-                self?.showErrorAlert(message: message)
+                self?.showErrorAlert(error: error)
             }
         }
         viewModel.load()
