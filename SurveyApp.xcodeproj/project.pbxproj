@@ -24,7 +24,6 @@
 		9DA4981023E1DF6C00C77592 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4980F23E1DF6C00C77592 /* BaseViewController.swift */; };
 		9DA4981223E1DF8300C77592 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4981123E1DF8300C77592 /* Extensions.swift */; };
 		9DA4981823E1DFB000C77592 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4981723E1DFB000C77592 /* NetworkManager.swift */; };
-		9DA4981A23E1DFBE00C77592 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4981923E1DFBE00C77592 /* APIResult.swift */; };
 		9DA4982023E1DFF300C77592 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4981F23E1DFF300C77592 /* AppCoordinator.swift */; };
 		9DA4982323E1E04500C77592 /* SurveyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4982223E1E04500C77592 /* SurveyListViewController.swift */; };
 		9DA4982523E1E05600C77592 /* SurveyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4982423E1E05600C77592 /* SurveyListViewModel.swift */; };
@@ -33,6 +32,7 @@
 		9DA4982F23E3CDC900C77592 /* SurveyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4982A23E3CDC900C77592 /* SurveyService.swift */; };
 		9DA4983D23E418AB00C77592 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4983B23E418AB00C77592 /* APIRouter.swift */; };
 		9DA4983E23E418AB00C77592 /* APIRouterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4983C23E418AB00C77592 /* APIRouterConfiguration.swift */; };
+		9DF609C823F6E5B200B63B05 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF609C723F6E5B200B63B05 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +77,6 @@
 		9DA4980F23E1DF6C00C77592 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9DA4981123E1DF8300C77592 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9DA4981723E1DFB000C77592 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		9DA4981923E1DFBE00C77592 /* APIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
 		9DA4981F23E1DFF300C77592 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9DA4982223E1E04500C77592 /* SurveyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListViewController.swift; sourceTree = "<group>"; };
 		9DA4982423E1E05600C77592 /* SurveyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListViewModel.swift; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 		9DA4982A23E3CDC900C77592 /* SurveyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyService.swift; sourceTree = "<group>"; };
 		9DA4983B23E418AB00C77592 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		9DA4983C23E418AB00C77592 /* APIRouterConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouterConfiguration.swift; sourceTree = "<group>"; };
+		9DF609C723F6E5B200B63B05 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		ADD40C16345346FBE2A69A98 /* Pods_SurveyApp_SurveyAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SurveyApp_SurveyAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D07DFAF796FF77E9442852 /* Pods-SurveyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyApp.release.xcconfig"; path = "Target Support Files/Pods-SurveyApp/Pods-SurveyApp.release.xcconfig"; sourceTree = "<group>"; };
 		C6EA5EFFE1C3FC5E0EA7C04F /* Pods_SurveyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SurveyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,8 +245,8 @@
 			isa = PBXGroup;
 			children = (
 				9DA4981723E1DFB000C77592 /* NetworkManager.swift */,
+				9DF609C723F6E5B200B63B05 /* NetworkError.swift */,
 				9DA4983A23E418AB00C77592 /* APIRouter */,
-				9DA4981923E1DFBE00C77592 /* APIResult.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -550,12 +550,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DA4982023E1DFF300C77592 /* AppCoordinator.swift in Sources */,
+				9DF609C823F6E5B200B63B05 /* NetworkError.swift in Sources */,
 				9DA4982323E1E04500C77592 /* SurveyListViewController.swift in Sources */,
 				9DA4980C23E1DEDF00C77592 /* AppDelegate.swift in Sources */,
 				9DA4983E23E418AB00C77592 /* APIRouterConfiguration.swift in Sources */,
 				9D389C4423E4664400E58209 /* TakeSurveyViewController.swift in Sources */,
 				9DA4980E23E1DF4700C77592 /* Constants.swift in Sources */,
-				9DA4981A23E1DFBE00C77592 /* APIResult.swift in Sources */,
 				9D389C4B23E6DA7100E58209 /* OAuthModel.swift in Sources */,
 				9DA4983D23E418AB00C77592 /* APIRouter.swift in Sources */,
 				9DA4981823E1DFB000C77592 /* NetworkManager.swift in Sources */,

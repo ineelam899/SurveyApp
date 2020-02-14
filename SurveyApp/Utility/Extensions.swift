@@ -10,8 +10,8 @@ import UIKit
 import THEPageControl
 
 extension UIViewController {
-    func showErrorAlert(message: String) {
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+    func showErrorAlert(error: NetworkError) {
+        let alert = UIAlertController(title: "Error", message: error.description, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default) { (_) in }
         alert.addAction(action)
         present(alert, animated: true, completion: nil)

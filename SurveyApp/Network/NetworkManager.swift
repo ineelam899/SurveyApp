@@ -9,26 +9,26 @@
 import Foundation
 
 protocol NetworkManagerProtocol {
-    func requestObject(_ router: APIRouterConfiguration, completion: @escaping ((Data?, String?) -> Void))
+    func requestObject(_ router: APIRouterConfiguration, completion: @escaping ((Data?, NetworkError?) -> Void))
 }
 
 class NetworkManager: NetworkManagerProtocol {
-    func requestObject(_ router: APIRouterConfiguration, completion: @escaping ((Data?, String?) -> Void)) {
+    func requestObject(_ router: APIRouterConfiguration, completion: @escaping ((Data?, NetworkError?) -> Void)) {
         let session = URLSession(configuration: URLSessionConfiguration.default)
         do {
             guard let request = try router.asURLRequest() else {
-                completion(nil, "Invalid URL generated.")
+                completion(nil, .badURL)
                 return
             }
             session.dataTask(with: request) { (data, response, error) in
                 guard let data = data else {
-                    completion(nil, error?.localizedDescription)
+                    completion(nil, .generic(error))
                     return
                 }
                 completion(data, nil)
             }.resume()
         }catch {
-            completion(nil, error.localizedDescription)
+            completion(nil, .generic(error))
         }
     }
 }
