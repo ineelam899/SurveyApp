@@ -8,19 +8,7 @@
 
 import Foundation
 
-open class SurveyResponse {
-    let surveys: [Survey]
-    
-    init() {
-        surveys = []
-    }
-    
-    init(surveys: [Survey]) {
-        self.surveys = surveys
-    }
-}
-
-open class Survey: Codable {
+class Survey: Codable {
     let id: String
     let title: String
     let description: String
@@ -33,7 +21,7 @@ open class Survey: Codable {
         case coverImageUrl = "cover_image_url"
     }
     
-    public init() {
+    init() {
         id = ""
         title = ""
         description = ""

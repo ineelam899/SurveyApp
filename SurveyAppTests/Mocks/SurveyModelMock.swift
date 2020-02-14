@@ -9,16 +9,6 @@
 import UIKit
 @testable import SurveyApp
 
-class SurveyResponseMock: SurveyResponse {
-    override init() {
-        super.init()
-    }
-    
-    required init(from decoder: Decoder) throws {
-        fatalError("init(from:) has not been implemented")
-    }
-}
-
 class SurveyMock: Survey {
     override init() {
         super.init()

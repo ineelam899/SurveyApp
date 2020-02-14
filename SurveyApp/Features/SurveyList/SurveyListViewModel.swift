@@ -39,8 +39,8 @@ class SurveyListViewModel {
     private func getSurveysList(){
         surveyService.getSurveysList() { [weak self] (result) in
             switch result {
-            case .success(let surveyAPIModel):
-                self?.surveys = surveyAPIModel.surveys
+            case .success(let surveys):
+                self?.surveys = surveys
                 self?.surveyListUpdatedBlock?()
             case .failure(let error):
                 self?.errorBlock?(error)
