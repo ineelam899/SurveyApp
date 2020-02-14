@@ -8,18 +8,6 @@
 
 import Foundation
 
-open class SurveyResponse {
-    let surveys: [Survey]
-    
-    init() {
-        surveys = []
-    }
-    
-    init(surveys: [Survey]) {
-        self.surveys = surveys
-    }
-}
-
 open class Survey: Codable {
     let id: String
     let title: String
