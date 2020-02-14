@@ -10,9 +10,10 @@ import Foundation
 import SwiftKeychainWrapper
 
 class SurveyListViewModel {
-    
-    private var surveys: [Survey]
+
     private let surveyService: SurveyServiceProtocol
+    private var surveys: [Survey]
+    private lazy var oAuthService = OAuthService(networkManager: NetworkManager())
     
     /// Reload table view hook for ViewController
     var surveyListUpdatedBlock: (()->Void)? = nil
@@ -48,7 +49,7 @@ class SurveyListViewModel {
     }
     
     private func getOAuthToken(){
-        surveyService.getOAuthToken() { [weak self] (result) in
+        oAuthService.getOAuthToken() { [weak self] (result) in
             switch result {
             case .success(let oauthAPIModel):
                 let authentication = "\(oauthAPIModel.tokenType) \(oauthAPIModel.accessToken)"
