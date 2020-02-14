@@ -11,7 +11,6 @@
 		16F47345B212C777AA1CEC1A /* Pods_SurveyApp_SurveyAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD40C16345346FBE2A69A98 /* Pods_SurveyApp_SurveyAppUITests.framework */; };
 		29A7DE3D66D765AD94F0E0D2 /* Pods_SurveyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6EA5EFFE1C3FC5E0EA7C04F /* Pods_SurveyApp.framework */; };
 		9D389C4423E4664400E58209 /* TakeSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C4323E4664400E58209 /* TakeSurveyViewController.swift */; };
-		9D389C4B23E6DA7100E58209 /* OAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C4A23E6DA7100E58209 /* OAuthModel.swift */; };
 		9D389C4E23E6F21500E58209 /* SurveyListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C4D23E6F21500E58209 /* SurveyListViewModelTests.swift */; };
 		9D389C5023E6F22E00E58209 /* SurveyModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C4F23E6F22E00E58209 /* SurveyModelMock.swift */; };
 		9D389C5223E6F23800E58209 /* SurveyServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C5123E6F23800E58209 /* SurveyServiceMock.swift */; };
@@ -33,6 +32,8 @@
 		9DA4983D23E418AB00C77592 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4983B23E418AB00C77592 /* APIRouter.swift */; };
 		9DA4983E23E418AB00C77592 /* APIRouterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4983C23E418AB00C77592 /* APIRouterConfiguration.swift */; };
 		9DF609C823F6E5B200B63B05 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF609C723F6E5B200B63B05 /* NetworkError.swift */; };
+		9DF609CB23F70A4800B63B05 /* OAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF609CA23F70A4800B63B05 /* OAuthModel.swift */; };
+		9DF609CD23F70A5800B63B05 /* OAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF609CC23F70A5800B63B05 /* OAuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +59,6 @@
 		43A1A2E0352C0976063CC3B3 /* Pods_SurveyAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SurveyAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		841850AD23AFF31AACF7D13B /* Pods-SurveyAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyAppTests.release.xcconfig"; path = "Target Support Files/Pods-SurveyAppTests/Pods-SurveyAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		9D389C4323E4664400E58209 /* TakeSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeSurveyViewController.swift; sourceTree = "<group>"; };
-		9D389C4A23E6DA7100E58209 /* OAuthModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthModel.swift; sourceTree = "<group>"; };
 		9D389C4D23E6F21500E58209 /* SurveyListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListViewModelTests.swift; sourceTree = "<group>"; };
 		9D389C4F23E6F22E00E58209 /* SurveyModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyModelMock.swift; sourceTree = "<group>"; };
 		9D389C5123E6F23800E58209 /* SurveyServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyServiceMock.swift; sourceTree = "<group>"; };
@@ -86,6 +86,8 @@
 		9DA4983B23E418AB00C77592 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		9DA4983C23E418AB00C77592 /* APIRouterConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouterConfiguration.swift; sourceTree = "<group>"; };
 		9DF609C723F6E5B200B63B05 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		9DF609CA23F70A4800B63B05 /* OAuthModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthModel.swift; sourceTree = "<group>"; };
+		9DF609CC23F70A5800B63B05 /* OAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthService.swift; sourceTree = "<group>"; };
 		ADD40C16345346FBE2A69A98 /* Pods_SurveyApp_SurveyAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SurveyApp_SurveyAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D07DFAF796FF77E9442852 /* Pods-SurveyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyApp.release.xcconfig"; path = "Target Support Files/Pods-SurveyApp/Pods-SurveyApp.release.xcconfig"; sourceTree = "<group>"; };
 		C6EA5EFFE1C3FC5E0EA7C04F /* Pods_SurveyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SurveyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +256,7 @@
 		9DA4980623E1DEDF00C77592 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9DF609C923F70A4800B63B05 /* OAuth */,
 				9DA4982823E3CDC900C77592 /* Survey */,
 			);
 			path = Services;
@@ -282,7 +285,6 @@
 			children = (
 				9DA4982A23E3CDC900C77592 /* SurveyService.swift */,
 				9DA4982923E3CDC900C77592 /* SurveyModel.swift */,
-				9D389C4A23E6DA7100E58209 /* OAuthModel.swift */,
 			);
 			path = Survey;
 			sourceTree = "<group>";
@@ -294,6 +296,15 @@
 				9DA4983C23E418AB00C77592 /* APIRouterConfiguration.swift */,
 			);
 			path = APIRouter;
+			sourceTree = "<group>";
+		};
+		9DF609C923F70A4800B63B05 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				9DF609CC23F70A5800B63B05 /* OAuthService.swift */,
+				9DF609CA23F70A4800B63B05 /* OAuthModel.swift */,
+			);
+			path = OAuth;
 			sourceTree = "<group>";
 		};
 		AC6B49D9E9FAA196F105DDEC /* Pods */ = {
@@ -556,7 +567,7 @@
 				9DA4983E23E418AB00C77592 /* APIRouterConfiguration.swift in Sources */,
 				9D389C4423E4664400E58209 /* TakeSurveyViewController.swift in Sources */,
 				9DA4980E23E1DF4700C77592 /* Constants.swift in Sources */,
-				9D389C4B23E6DA7100E58209 /* OAuthModel.swift in Sources */,
+				9DF609CB23F70A4800B63B05 /* OAuthModel.swift in Sources */,
 				9DA4983D23E418AB00C77592 /* APIRouter.swift in Sources */,
 				9DA4981823E1DFB000C77592 /* NetworkManager.swift in Sources */,
 				9DA4981023E1DF6C00C77592 /* BaseViewController.swift in Sources */,
@@ -565,6 +576,7 @@
 				9DA4981223E1DF8300C77592 /* Extensions.swift in Sources */,
 				9DA4982F23E3CDC900C77592 /* SurveyService.swift in Sources */,
 				9DA4982E23E3CDC900C77592 /* SurveyModel.swift in Sources */,
+				9DF609CD23F70A5800B63B05 /* OAuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
