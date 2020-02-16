@@ -10,13 +10,12 @@ import UIKit
 import Nuke
 
 class SurveyListCell: UITableViewCell {
-    
     //MARK:- IBOutlets
     @IBOutlet weak var surveyImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    //MARK:- Initialize Cell UI
+    //MARK:- Initializers
     func initGUI(model: Model) {
         nameLabel.text = model.name
         descriptionLabel.text = model.description

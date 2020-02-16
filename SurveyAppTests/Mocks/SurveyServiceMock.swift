@@ -10,21 +10,26 @@ import UIKit
 @testable import SurveyApp
 
 class SurveyServiceMock: SurveyServiceProtocol {
-
+    //MARK:- Data Members
     let mockObj: [SurveyMock]
+    
+    //MARK:- Initializers
     init(mock: [SurveyMock]) {
         mockObj = mock
     }
     
-    func getSurveysList(completion: @escaping (Result<[Survey], NetworkError>) -> Void) {
+    //MARK:- Get Survey List
+    func getSurveysList(page: Int, completion: @escaping (Result<[Survey], NetworkError>) -> Void) {
         completion(.success(mockObj))
     }
 }
 
 class SurveyServiceMockError: SurveyServiceProtocol {
-    
+    //MARK:- Initializers
     init() {}
-    func getSurveysList(completion: @escaping (Result<[Survey], NetworkError>) -> Void) {
+    
+    //MARK:- Get Survey List
+    func getSurveysList(page: Int, completion: @escaping (Result<[Survey], NetworkError>) -> Void) {
         completion(.failure(.generic(NSError(domain: "Mock error", code: 401, userInfo: nil))))
     }
 }

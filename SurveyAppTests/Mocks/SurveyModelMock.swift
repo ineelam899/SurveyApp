@@ -10,6 +10,7 @@ import UIKit
 @testable import SurveyApp
 
 class SurveyMock: Survey {
+    //MARK:- Initializers
     override init() {
         super.init()
     }

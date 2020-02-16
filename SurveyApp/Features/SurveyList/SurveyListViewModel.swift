@@ -10,23 +10,31 @@ import Foundation
 import SwiftKeychainWrapper
 
 class SurveyListViewModel {
-
+    //MARK:- Data Members
     private let surveyService: SurveyServiceProtocol
     private var surveys: [Survey]
-    private lazy var oAuthService = OAuthService(networkManager: NetworkManager())
+    private lazy var oAuthService: OAuthService = OAuthService(networkManager: NetworkManager())
+    private var page: Int = 1
     
-    /// Reload table view hook for ViewController
+    var isLastPage: Bool = false
+    var currentPage: Int {
+        set { page = newValue }
+        get { page }
+    }
+    
+    //MARK:- Reload Tableview Hook
     var surveyListUpdatedBlock: (()->Void)? = nil
     
-    /// Error hook for ViewController
+    //MARK:- Error Hook
     var errorBlock: ((NetworkError)->Void)? = nil
     
+    //MARK:- Initializers
     init(surveyService: SurveyServiceProtocol) {
         self.surveyService = surveyService
         surveys = []
     }
     
-    /// Loads surveys list
+    //MARK:- Loads Survey List
     func load() {
         let authentication = KeychainWrapper.standard.string(forKey: HTTPHeaderField.authentication.rawValue)
         if(authentication == nil){
@@ -36,11 +44,13 @@ class SurveyListViewModel {
         }
     }
     
+    //MARK:- Internals
     private func getSurveysList(){
-        surveyService.getSurveysList() { [weak self] (result) in
+        surveyService.getSurveysList(page: currentPage) { [weak self] (result) in
             switch result {
             case .success(let surveys):
-                self?.surveys = surveys
+                self?.isLastPage = (surveys.count == 0) ? true : false
+                self?.surveys.append(contentsOf: surveys)
                 self?.surveyListUpdatedBlock?()
             case .failure(let error):
                 self?.errorBlock?(error)
@@ -61,7 +71,7 @@ class SurveyListViewModel {
         }
     }
     
-    //MARK:- UITableview data related methods
+    //MARK:- UITableview Data Related
     var numberOfRows: Int {
         return surveys.count
     }

@@ -9,8 +9,10 @@
 import UIKit
 
 class AppCoordinator {
+    //MARK:- Data Members
     private let storyboardName = "Main"
     
+    //MARK:- Configure Methods
     func configureRootController(window: UIWindow?) {
         let navController: UINavigationController = UIStoryboard(name: storyboardName, bundle: Bundle.main).initialViewController()
         if let surveyListingController = navController.viewControllers.first as? SurveyListViewController {

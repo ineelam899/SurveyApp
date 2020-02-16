@@ -7,10 +7,8 @@ target 'SurveyApp' do
 
   # Pods for SurveyApp
   pod 'Nuke'
-  pod 'THEPageControl'
   pod 'SwiftKeychainWrapper'
-  pod 'NVActivityIndicatorView'
-
+  
   target 'SurveyAppTests' do
     inherit! :search_paths
     # Pods for testing

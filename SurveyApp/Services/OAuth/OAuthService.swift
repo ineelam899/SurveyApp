@@ -15,10 +15,12 @@ protocol OAuthServiceProtocol {
 class OAuthService: OAuthServiceProtocol {
     private let networkManager: NetworkManagerProtocol
     
+    //MARK:- Initializers
     init(networkManager: NetworkManagerProtocol) {
         self.networkManager = networkManager
     }
     
+    //MARK:- Get OAuthToken
     func getOAuthToken(completion: @escaping (Result<OAuth, NetworkError>)-> Void) {
         let router: APIRouter = .oAuth(username: "carlos@nimbl3.com", password: "antikera", grantType:"password")
         networkManager.requestObject(router) { (data: Data?, error: Error?) in

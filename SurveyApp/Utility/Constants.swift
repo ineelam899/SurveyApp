@@ -17,6 +17,10 @@ struct K {
         static let username = "username"
         static let password = "password"
         static let grantType = "grant_type"
+        
+        static let page = "page"
+        static let perPage = "per_page"
+        static let totalPerPage = 3
     }
 }
 

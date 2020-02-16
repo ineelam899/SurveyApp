@@ -7,7 +7,6 @@
 //
 
 enum NetworkError: Error {
-    
     case badURL
     case badJSON
     case generic(Error?)

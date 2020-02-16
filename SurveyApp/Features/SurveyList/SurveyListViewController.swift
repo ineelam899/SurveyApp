@@ -7,14 +7,11 @@
 //
 
 import UIKit
-import THEPageControl
-import NVActivityIndicatorView
 
-class SurveyListViewController: UIViewController, NVActivityIndicatorViewable {
-    
+class SurveyListViewController: UIViewController {
     //MARK:- IBOutlets
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var pageControl: PageControl!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     //MARK:- Data Members
     private let surveyCellIdentifier = "SurveyListCell"
@@ -22,27 +19,26 @@ class SurveyListViewController: UIViewController, NVActivityIndicatorViewable {
     //MARK:- Injected Properties
     var viewModel: SurveyListViewModel!
     
+    //MARK:- Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        pageControl.configuration.layoutAxis = .vertical
-        pageControl.configuration.spacing = 8
+        activityIndicatorView.center = self.view.center
         fetchData()
     }
     
+    //MARK:- Internals
     private func fetchData() {
-        startAnimating()
+        activityIndicatorView.startAnimating()
         viewModel.surveyListUpdatedBlock = { [weak self] in
             DispatchQueue.main.async {
-                self?.stopAnimating()
-                self?.pageControl.dots = Array(repeating: .customStyle, count: self?.viewModel.numberOfRows ?? 0)
+                self?.activityIndicatorView.stopAnimating()
                 self?.tableView.reloadData()
             }
         }
         viewModel.errorBlock = { [weak self] error in
             DispatchQueue.main.async {
-                self?.stopAnimating()
+                self?.activityIndicatorView.stopAnimating()
                 self?.showErrorAlert(error: error)
             }
         }
@@ -50,14 +46,12 @@ class SurveyListViewController: UIViewController, NVActivityIndicatorViewable {
     }
     
     //MARK:- IBActions
-    
     @IBAction func didPressRefresh(_ sender: Any) {
         fetchData()
     }
 }
 
-extension SurveyListViewController: UITableViewDelegate, UITableViewDataSource {
-    
+extension SurveyListViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return self.tableView.frame.size.height
     }
@@ -71,18 +65,15 @@ extension SurveyListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.initGUI(model: viewModel.cellModelForRow(index: indexPath.row))
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-    }
 }
 
 extension SurveyListViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let row = round(scrollView.contentOffset.y/tableView.frame.size.height)
-        pageControl.setActiveDotIndex(Float(row), animated: false)
+        let row = round(tableView.contentOffset.y/tableView.frame.size.height)
+        let lastElement = viewModel.numberOfRows - 1
+        if !viewModel.isLastPage && !activityIndicatorView.isAnimating && Int(row) == lastElement {
+            viewModel.currentPage += 1
+            fetchData()
+        }
     }
 }
