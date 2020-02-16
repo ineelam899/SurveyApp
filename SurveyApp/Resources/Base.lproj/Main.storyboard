@@ -94,14 +94,11 @@
                                     <outlet property="delegate" destination="3V8-b5-XD5" id="9wq-Jz-YKU"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nMk-SZ-hO1" customClass="PageControl" customModule="THEPageControl">
-                                <rect key="frame" x="382" y="354" width="20" height="100"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="7GP-aU-VaO"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Iwp-UJ-VAg"/>
-                                </constraints>
-                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="9U8-zM-wWI">
+                                <rect key="frame" x="197" y="394" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbW-FC-i5N">
                                 <rect key="frame" x="132" y="706" width="150" height="44"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -129,9 +126,7 @@
                             <constraint firstItem="UoV-FQ-JTv" firstAttribute="trailing" secondItem="7yC-CQ-RYc" secondAttribute="trailing" id="2iC-fn-50D"/>
                             <constraint firstAttribute="bottom" secondItem="UoV-FQ-JTv" secondAttribute="bottom" id="GR3-QY-1ET"/>
                             <constraint firstItem="UoV-FQ-JTv" firstAttribute="leading" secondItem="7yC-CQ-RYc" secondAttribute="leading" id="IG8-vh-dbS"/>
-                            <constraint firstItem="7yC-CQ-RYc" firstAttribute="trailing" secondItem="nMk-SZ-hO1" secondAttribute="trailing" constant="12" id="RoY-p0-XEC"/>
                             <constraint firstItem="7yC-CQ-RYc" firstAttribute="bottom" secondItem="TbW-FC-i5N" secondAttribute="bottom" constant="24" id="gAS-7m-mAb"/>
-                            <constraint firstItem="nMk-SZ-hO1" firstAttribute="centerY" secondItem="7yC-CQ-RYc" secondAttribute="centerY" id="mwm-FL-ZfN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7yC-CQ-RYc"/>
                     </view>
@@ -144,7 +139,7 @@
                         <barButtonItem key="rightBarButtonItem" image="line.horizontal.3" catalog="system" id="OlB-ew-Wql"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="pageControl" destination="nMk-SZ-hO1" id="m2r-8L-MvB"/>
+                        <outlet property="activityIndicatorView" destination="9U8-zM-wWI" id="LdY-P6-qcd"/>
                         <outlet property="tableView" destination="UoV-FQ-JTv" id="zF4-3R-Ckb"/>
                     </connections>
                 </viewController>

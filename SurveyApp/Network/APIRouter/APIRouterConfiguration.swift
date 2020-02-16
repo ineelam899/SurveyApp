@@ -33,11 +33,9 @@ extension APIRouterConfiguration {
         if(!isOAuthCall && KeychainWrapper.standard.string(forKey: HTTPHeaderField.authentication.rawValue) != nil){
             urlRequest.setValue(KeychainWrapper.standard.string(forKey: HTTPHeaderField.authentication.rawValue), forHTTPHeaderField: HTTPHeaderField.authentication.rawValue)
         }
-        switch method {
-        case HTTPMethod.post.rawValue:
+        
+        if(method == HTTPMethod.post.rawValue){
             urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters ?? [], options: .prettyPrinted)
-        default:
-        break
         }
         return urlRequest
     }

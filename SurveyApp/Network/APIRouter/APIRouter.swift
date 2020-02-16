@@ -10,8 +10,8 @@ import Foundation
 
 enum APIRouter: APIRouterConfiguration {
     case oAuth(username: String, password: String, grantType: String)
-    case surveyList
-
+    case surveyList(page: Int)
+    
     var method: String {
         switch self {
         case .oAuth:
@@ -34,9 +34,9 @@ enum APIRouter: APIRouterConfiguration {
         switch self {
         case .oAuth(let username, let password, let grantType):
             return [K.APIParameterKey.username: username,               K.APIParameterKey.password: password,
-                K.APIParameterKey.grantType: grantType]
-        case .surveyList:
-            return nil
+                    K.APIParameterKey.grantType: grantType]
+        case .surveyList( let page):
+            return [K.APIParameterKey.page: page, K.APIParameterKey.perPage: K.APIParameterKey.totalPerPage]
         }
     }
     
@@ -52,6 +52,10 @@ enum APIRouter: APIRouterConfiguration {
     var apiURL: URL? {
         var urlComp = URLComponents(string: baseURL)
         urlComp?.path = path
+        
+        if(method == HTTPMethod.get.rawValue){
+            urlComp?.setQueryItems(with: parameters ?? [:])
+        }
         guard let url = urlComp?.url else {return nil}
         return url
     }

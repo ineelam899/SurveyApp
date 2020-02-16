@@ -1,30 +1,20 @@
 PODS:
   - Nuke (8.4.0)
-  - NVActivityIndicatorView (4.8.0):
-    - NVActivityIndicatorView/Presenter (= 4.8.0)
-  - NVActivityIndicatorView/Presenter (4.8.0)
   - SwiftKeychainWrapper (3.4.0)
-  - THEPageControl (1.1.0)
 
 DEPENDENCIES:
   - Nuke
-  - NVActivityIndicatorView
   - SwiftKeychainWrapper
-  - THEPageControl
 
 SPEC REPOS:
   trunk:
     - Nuke
-    - NVActivityIndicatorView
     - SwiftKeychainWrapper
-    - THEPageControl
 
 SPEC CHECKSUMS:
   Nuke: fa6f784c4f7e1c0f9313668510186c68b7af2509
-  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
-  THEPageControl: 2da351bce6d89205be6f9b0d88176029aa47932c
 
-PODFILE CHECKSUM: d82ef582b389d3782bae3c8ce19f4625ae7bf5d0
+PODFILE CHECKSUM: 5ae47626f6b7cfcbb629deff23a3c03963124efb
 
 COCOAPODS: 1.8.4

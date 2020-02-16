@@ -9,18 +9,21 @@
 import Foundation
 
 protocol SurveyServiceProtocol {
-    func getSurveysList(completion: @escaping (Result<[Survey], NetworkError>)-> Void)
+    func getSurveysList(page: Int, completion: @escaping (Result<[Survey], NetworkError>)-> Void)
 }
 
 class SurveyService: SurveyServiceProtocol {
+    //MARK:- Data Members
     private let networkManager: NetworkManagerProtocol
     
+    //MARK:- Initializers
     init(networkManager: NetworkManagerProtocol) {
         self.networkManager = networkManager
     }
     
-    func getSurveysList(completion: @escaping (Result<[Survey], NetworkError>)-> Void) {
-        let router: APIRouter = .surveyList
+    //MARK:- Get Survey List
+    func getSurveysList(page: Int, completion: @escaping (Result<[Survey], NetworkError>)-> Void) {
+        let router: APIRouter = .surveyList(page: page)
         networkManager.requestObject(router) { (data: Data?, error: Error?) in
             guard let data = data, let surveys = try? JSONDecoder().decode([Survey].self, from: data) else {
                 completion(.failure(.badJSON))

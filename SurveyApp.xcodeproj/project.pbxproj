@@ -14,14 +14,13 @@
 		9D389C4E23E6F21500E58209 /* SurveyListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C4D23E6F21500E58209 /* SurveyListViewModelTests.swift */; };
 		9D389C5023E6F22E00E58209 /* SurveyModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C4F23E6F22E00E58209 /* SurveyModelMock.swift */; };
 		9D389C5223E6F23800E58209 /* SurveyServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C5123E6F23800E58209 /* SurveyServiceMock.swift */; };
+		9D53ACFA23F82D8100F29547 /* URLComponentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53ACF923F82D8100F29547 /* URLComponentsExtension.swift */; };
 		9DA497EE23E1DBB500C77592 /* SurveyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA497ED23E1DBB500C77592 /* SurveyAppUITests.swift */; };
 		9DA4980923E1DEDF00C77592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA497FD23E1DEDF00C77592 /* Assets.xcassets */; };
 		9DA4980A23E1DEDF00C77592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA497FE23E1DEDF00C77592 /* LaunchScreen.storyboard */; };
 		9DA4980B23E1DEDF00C77592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4980023E1DEDF00C77592 /* Main.storyboard */; };
 		9DA4980C23E1DEDF00C77592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4980823E1DEDF00C77592 /* AppDelegate.swift */; };
 		9DA4980E23E1DF4700C77592 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4980D23E1DF4700C77592 /* Constants.swift */; };
-		9DA4981023E1DF6C00C77592 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4980F23E1DF6C00C77592 /* BaseViewController.swift */; };
-		9DA4981223E1DF8300C77592 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4981123E1DF8300C77592 /* Extensions.swift */; };
 		9DA4981823E1DFB000C77592 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4981723E1DFB000C77592 /* NetworkManager.swift */; };
 		9DA4982023E1DFF300C77592 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4981F23E1DFF300C77592 /* AppCoordinator.swift */; };
 		9DA4982323E1E04500C77592 /* SurveyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4982223E1E04500C77592 /* SurveyListViewController.swift */; };
@@ -34,6 +33,8 @@
 		9DF609C823F6E5B200B63B05 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF609C723F6E5B200B63B05 /* NetworkError.swift */; };
 		9DF609CB23F70A4800B63B05 /* OAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF609CA23F70A4800B63B05 /* OAuthModel.swift */; };
 		9DF609CD23F70A5800B63B05 /* OAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF609CC23F70A5800B63B05 /* OAuthService.swift */; };
+		9DF609D223F720C100B63B05 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF609D123F720C100B63B05 /* UIViewControllerExtension.swift */; };
+		9DF609D423F7211000B63B05 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF609D323F7211000B63B05 /* UIStoryboardExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		9D389C4D23E6F21500E58209 /* SurveyListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListViewModelTests.swift; sourceTree = "<group>"; };
 		9D389C4F23E6F22E00E58209 /* SurveyModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyModelMock.swift; sourceTree = "<group>"; };
 		9D389C5123E6F23800E58209 /* SurveyServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyServiceMock.swift; sourceTree = "<group>"; };
+		9D53ACF923F82D8100F29547 /* URLComponentsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsExtension.swift; sourceTree = "<group>"; };
 		9DA497C823E1DBB100C77592 /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA497D923E1DBB400C77592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA497DE23E1DBB500C77592 /* SurveyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,8 +76,6 @@
 		9DA4980123E1DEDF00C77592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9DA4980823E1DEDF00C77592 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DA4980D23E1DF4700C77592 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		9DA4980F23E1DF6C00C77592 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		9DA4981123E1DF8300C77592 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9DA4981723E1DFB000C77592 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9DA4981F23E1DFF300C77592 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9DA4982223E1E04500C77592 /* SurveyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +88,8 @@
 		9DF609C723F6E5B200B63B05 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		9DF609CA23F70A4800B63B05 /* OAuthModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthModel.swift; sourceTree = "<group>"; };
 		9DF609CC23F70A5800B63B05 /* OAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthService.swift; sourceTree = "<group>"; };
+		9DF609D123F720C100B63B05 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		9DF609D323F7211000B63B05 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
 		ADD40C16345346FBE2A69A98 /* Pods_SurveyApp_SurveyAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SurveyApp_SurveyAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D07DFAF796FF77E9442852 /* Pods-SurveyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyApp.release.xcconfig"; path = "Target Support Files/Pods-SurveyApp/Pods-SurveyApp.release.xcconfig"; sourceTree = "<group>"; };
 		C6EA5EFFE1C3FC5E0EA7C04F /* Pods_SurveyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SurveyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +183,7 @@
 				9DA4980623E1DEDF00C77592 /* Services */,
 				9DA4980423E1DEDF00C77592 /* Network */,
 				9DA497FB23E1DEDF00C77592 /* Utility */,
+				9DF609CE23F7208600B63B05 /* Extensions */,
 				9DA497FC23E1DEDF00C77592 /* Resources */,
 				9DA497D923E1DBB400C77592 /* Info.plist */,
 			);
@@ -210,8 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				9DA4980D23E1DF4700C77592 /* Constants.swift */,
-				9DA4980F23E1DF6C00C77592 /* BaseViewController.swift */,
-				9DA4981123E1DF8300C77592 /* Extensions.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -305,6 +306,16 @@
 				9DF609CA23F70A4800B63B05 /* OAuthModel.swift */,
 			);
 			path = OAuth;
+			sourceTree = "<group>";
+		};
+		9DF609CE23F7208600B63B05 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9DF609D123F720C100B63B05 /* UIViewControllerExtension.swift */,
+				9DF609D323F7211000B63B05 /* UIStoryboardExtension.swift */,
+				9D53ACF923F82D8100F29547 /* URLComponentsExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		AC6B49D9E9FAA196F105DDEC /* Pods */ = {
@@ -561,19 +572,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DA4982023E1DFF300C77592 /* AppCoordinator.swift in Sources */,
+				9DF609D223F720C100B63B05 /* UIViewControllerExtension.swift in Sources */,
 				9DF609C823F6E5B200B63B05 /* NetworkError.swift in Sources */,
 				9DA4982323E1E04500C77592 /* SurveyListViewController.swift in Sources */,
 				9DA4980C23E1DEDF00C77592 /* AppDelegate.swift in Sources */,
+				9DF609D423F7211000B63B05 /* UIStoryboardExtension.swift in Sources */,
 				9DA4983E23E418AB00C77592 /* APIRouterConfiguration.swift in Sources */,
 				9D389C4423E4664400E58209 /* TakeSurveyViewController.swift in Sources */,
 				9DA4980E23E1DF4700C77592 /* Constants.swift in Sources */,
 				9DF609CB23F70A4800B63B05 /* OAuthModel.swift in Sources */,
 				9DA4983D23E418AB00C77592 /* APIRouter.swift in Sources */,
+				9D53ACFA23F82D8100F29547 /* URLComponentsExtension.swift in Sources */,
 				9DA4981823E1DFB000C77592 /* NetworkManager.swift in Sources */,
-				9DA4981023E1DF6C00C77592 /* BaseViewController.swift in Sources */,
 				9DA4982523E1E05600C77592 /* SurveyListViewModel.swift in Sources */,
 				9DA4982723E1E06500C77592 /* SurveyListCell.swift in Sources */,
-				9DA4981223E1DF8300C77592 /* Extensions.swift in Sources */,
 				9DA4982F23E3CDC900C77592 /* SurveyService.swift in Sources */,
 				9DA4982E23E3CDC900C77592 /* SurveyModel.swift in Sources */,
 				9DF609CD23F70A5800B63B05 /* OAuthService.swift in Sources */,
