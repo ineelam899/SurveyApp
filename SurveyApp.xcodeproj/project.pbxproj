@@ -15,6 +15,9 @@
 		9D389C5023E6F22E00E58209 /* SurveyModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C4F23E6F22E00E58209 /* SurveyModelMock.swift */; };
 		9D389C5223E6F23800E58209 /* SurveyServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C5123E6F23800E58209 /* SurveyServiceMock.swift */; };
 		9D53ACFA23F82D8100F29547 /* URLComponentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53ACF923F82D8100F29547 /* URLComponentsExtension.swift */; };
+		9D53AD8323F9A70C00F29547 /* SurveyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53AD8223F9A70C00F29547 /* SurveyServiceTests.swift */; };
+		9D53AD8523F9A71F00F29547 /* OAuthServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53AD8423F9A71F00F29547 /* OAuthServiceTests.swift */; };
+		9D53AD8723F9ACEC00F29547 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53AD8623F9ACEC00F29547 /* NetworkManagerTests.swift */; };
 		9DA497EE23E1DBB500C77592 /* SurveyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA497ED23E1DBB500C77592 /* SurveyAppUITests.swift */; };
 		9DA4980923E1DEDF00C77592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA497FD23E1DEDF00C77592 /* Assets.xcassets */; };
 		9DA4980A23E1DEDF00C77592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA497FE23E1DEDF00C77592 /* LaunchScreen.storyboard */; };
@@ -64,6 +67,9 @@
 		9D389C4F23E6F22E00E58209 /* SurveyModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyModelMock.swift; sourceTree = "<group>"; };
 		9D389C5123E6F23800E58209 /* SurveyServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyServiceMock.swift; sourceTree = "<group>"; };
 		9D53ACF923F82D8100F29547 /* URLComponentsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsExtension.swift; sourceTree = "<group>"; };
+		9D53AD8223F9A70C00F29547 /* SurveyServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyServiceTests.swift; sourceTree = "<group>"; };
+		9D53AD8423F9A71F00F29547 /* OAuthServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthServiceTests.swift; sourceTree = "<group>"; };
+		9D53AD8623F9ACEC00F29547 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		9DA497C823E1DBB100C77592 /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA497D923E1DBB400C77592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA497DE23E1DBB500C77592 /* SurveyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +200,9 @@
 			isa = PBXGroup;
 			children = (
 				9D389C4C23E6F1D700E58209 /* Mocks */,
+				9D53AD8623F9ACEC00F29547 /* NetworkManagerTests.swift */,
+				9D53AD8423F9A71F00F29547 /* OAuthServiceTests.swift */,
+				9D53AD8223F9A70C00F29547 /* SurveyServiceTests.swift */,
 				9D389C4D23E6F21500E58209 /* SurveyListViewModelTests.swift */,
 				9DA497E423E1DBB500C77592 /* Info.plist */,
 			);
@@ -596,8 +605,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D53AD8723F9ACEC00F29547 /* NetworkManagerTests.swift in Sources */,
 				9D389C4E23E6F21500E58209 /* SurveyListViewModelTests.swift in Sources */,
+				9D53AD8323F9A70C00F29547 /* SurveyServiceTests.swift in Sources */,
 				9D389C5023E6F22E00E58209 /* SurveyModelMock.swift in Sources */,
+				9D53AD8523F9A71F00F29547 /* OAuthServiceTests.swift in Sources */,
 				9D389C5223E6F23800E58209 /* SurveyServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
