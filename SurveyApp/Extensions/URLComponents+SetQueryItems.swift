@@ -1,5 +1,5 @@
 //
-//  URLComponentsExtension.swift
+//  URLComponents+SetQueryItems.swift
 //  SurveyApp
 //
 //  Created by sysnet on 2/15/20.

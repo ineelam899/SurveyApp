@@ -33,8 +33,7 @@ enum APIRouter: APIRouterConfiguration {
     var parameters: [String : Any]? {
         switch self {
         case .oAuth(let username, let password, let grantType):
-            return [K.APIParameterKey.username: username,               K.APIParameterKey.password: password,
-                    K.APIParameterKey.grantType: grantType]
+            return [K.APIParameterKey.username: username, K.APIParameterKey.password: password, K.APIParameterKey.grantType: grantType]
         case .surveyList( let page):
             return [K.APIParameterKey.page: page, K.APIParameterKey.perPage: K.APIParameterKey.totalPerPage]
         }

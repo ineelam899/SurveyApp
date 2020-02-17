@@ -11,10 +11,10 @@ import UIKit
 
 class SurveyServiceMock: SurveyServiceProtocol {
     //MARK:- Data Members
-    let mockObj: [SurveyMock]
+    let mockObj: [Survey]
     
     //MARK:- Initializers
-    init(mock: [SurveyMock]) {
+    init(mock: [Survey]) {
         mockObj = mock
     }
     
