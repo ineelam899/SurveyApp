@@ -58,7 +58,7 @@ class SurveyListViewController: UIViewController {
 
 extension SurveyListViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.tableView.frame.size.height
+        return tableView.frame.size.height
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
