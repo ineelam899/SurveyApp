@@ -18,6 +18,7 @@ class SurveyListViewController: UIViewController {
     
     //MARK:- Injected Properties
     var viewModel: SurveyListViewModel!
+    var coordinator: SurveyListCoordinator!
     
     //MARK:- Lifecycles
     override func viewDidLoad() {
@@ -48,6 +49,10 @@ class SurveyListViewController: UIViewController {
     //MARK:- IBActions
     @IBAction func didPressRefresh(_ sender: Any) {
         fetchData()
+    }
+    
+    @IBAction func didPressTakeTheSurvey(_ sender: Any) {
+        coordinator.takeSurvey()
     }
 }
 

@@ -19,6 +19,7 @@ class AppCoordinator {
             let networkManager = NetworkManager()
             let surveyService = SurveyService(networkManager: networkManager)
             surveyListingController.viewModel = SurveyListViewModel(surveyService: surveyService)
+            surveyListingController.coordinator = SurveyListCoordinator(presenter: navController)
         }
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
