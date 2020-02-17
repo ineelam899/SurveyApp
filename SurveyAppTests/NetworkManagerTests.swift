@@ -27,15 +27,14 @@ class NetworkManagerTests: XCTestCase {
         let router: APIRouter = .oAuth(username: username, password: password, grantType: grantType)
         
         //WHEN
-        networkManager.requestObject(router) { (data: Data?, error: Error?) in
-            guard let data = data else {
-                print(error ?? "Error occured.")
-                return
+        networkManager.requestObject(router) { (result) in
+            switch result {
+            case .success( _):
+                //THEN
+                expectation.fulfill()
+            case .failure(let error):
+                print(error)
             }
-            
-            XCTAssertNotNil(data, "Data is nil")
-            //THEN
-            expectation.fulfill()
         }
         wait(for: [expectation], timeout: 5)
     }

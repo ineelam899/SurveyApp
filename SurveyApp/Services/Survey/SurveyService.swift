@@ -24,12 +24,17 @@ class SurveyService: SurveyServiceProtocol {
     //MARK:- Get Survey List
     func getSurveysList(page: Int, completion: @escaping (Result<[Survey], NetworkError>)-> Void) {
         let router: APIRouter = .surveyList(page: page)
-        networkManager.requestObject(router) { (data: Data?, error: Error?) in
-            guard let data = data, let surveys = try? JSONDecoder().decode([Survey].self, from: data) else {
-                completion(.failure(.badJSON))
-                return
+        networkManager.requestObject(router) { (result) in
+            switch result {
+            case .success(let data):
+                guard let surveys = try? JSONDecoder().decode([Survey].self, from: data) else {
+                    completion(.failure(.badJSON))
+                    return
+                }
+                completion(.success(surveys))
+            case .failure(let error):
+                completion(.failure(.generic(error)))
             }
-            completion(.success(surveys))
         }
     }
 }
