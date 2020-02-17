@@ -21,7 +21,7 @@ class SurveyListViewModelTests: XCTestCase {
     func testSurveyLoading() {
         //GIVEN
         let expectation = XCTestExpectation(description: "event wait")
-        let viewModel = SurveyListViewModel(surveyService: SurveyServiceMock(mock: [SurveyMock()]))
+        let viewModel = SurveyListViewModel(surveyService: SurveyServiceMock(mock: [Survey()]))
         
         viewModel.surveyListUpdatedBlock = {
             //THEN
@@ -46,7 +46,7 @@ class SurveyListViewModelTests: XCTestCase {
     }
     
     func testNumberOfRows() {
-        let viewModel = SurveyListViewModel(surveyService: SurveyServiceMock(mock: [SurveyMock()]))
+        let viewModel = SurveyListViewModel(surveyService: SurveyServiceMock(mock: [Survey()]))
         XCTAssert(viewModel.numberOfRows == 0)
     }
 }

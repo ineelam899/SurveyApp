@@ -13,7 +13,6 @@
 		9D221D1D23FA9C1D002A4879 /* SurveyListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D221D1C23FA9C1D002A4879 /* SurveyListCoordinator.swift */; };
 		9D389C4423E4664400E58209 /* TakeSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C4323E4664400E58209 /* TakeSurveyViewController.swift */; };
 		9D389C4E23E6F21500E58209 /* SurveyListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C4D23E6F21500E58209 /* SurveyListViewModelTests.swift */; };
-		9D389C5023E6F22E00E58209 /* SurveyModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C4F23E6F22E00E58209 /* SurveyModelMock.swift */; };
 		9D389C5223E6F23800E58209 /* SurveyServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C5123E6F23800E58209 /* SurveyServiceMock.swift */; };
 		9D53ACFA23F82D8100F29547 /* URLComponents+SetQueryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53ACF923F82D8100F29547 /* URLComponents+SetQueryItems.swift */; };
 		9D53AD8323F9A70C00F29547 /* SurveyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53AD8223F9A70C00F29547 /* SurveyServiceTests.swift */; };
@@ -66,7 +65,6 @@
 		9D221D1C23FA9C1D002A4879 /* SurveyListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListCoordinator.swift; sourceTree = "<group>"; };
 		9D389C4323E4664400E58209 /* TakeSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeSurveyViewController.swift; sourceTree = "<group>"; };
 		9D389C4D23E6F21500E58209 /* SurveyListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListViewModelTests.swift; sourceTree = "<group>"; };
-		9D389C4F23E6F22E00E58209 /* SurveyModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyModelMock.swift; sourceTree = "<group>"; };
 		9D389C5123E6F23800E58209 /* SurveyServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyServiceMock.swift; sourceTree = "<group>"; };
 		9D53ACF923F82D8100F29547 /* URLComponents+SetQueryItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+SetQueryItems.swift"; sourceTree = "<group>"; };
 		9D53AD8223F9A70C00F29547 /* SurveyServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyServiceTests.swift; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				9D389C5123E6F23800E58209 /* SurveyServiceMock.swift */,
-				9D389C4F23E6F22E00E58209 /* SurveyModelMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -612,7 +609,6 @@
 				9D53AD8723F9ACEC00F29547 /* NetworkManagerTests.swift in Sources */,
 				9D389C4E23E6F21500E58209 /* SurveyListViewModelTests.swift in Sources */,
 				9D53AD8323F9A70C00F29547 /* SurveyServiceTests.swift in Sources */,
-				9D389C5023E6F22E00E58209 /* SurveyModelMock.swift in Sources */,
 				9D53AD8523F9A71F00F29547 /* OAuthServiceTests.swift in Sources */,
 				9D389C5223E6F23800E58209 /* SurveyServiceMock.swift in Sources */,
 			);
