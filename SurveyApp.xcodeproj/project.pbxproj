@@ -10,6 +10,7 @@
 		0282CA192606C42441B67A8E /* Pods_SurveyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A1A2E0352C0976063CC3B3 /* Pods_SurveyAppTests.framework */; };
 		16F47345B212C777AA1CEC1A /* Pods_SurveyApp_SurveyAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD40C16345346FBE2A69A98 /* Pods_SurveyApp_SurveyAppUITests.framework */; };
 		29A7DE3D66D765AD94F0E0D2 /* Pods_SurveyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6EA5EFFE1C3FC5E0EA7C04F /* Pods_SurveyApp.framework */; };
+		9D221D1D23FA9C1D002A4879 /* SurveyListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D221D1C23FA9C1D002A4879 /* SurveyListCoordinator.swift */; };
 		9D389C4423E4664400E58209 /* TakeSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C4323E4664400E58209 /* TakeSurveyViewController.swift */; };
 		9D389C4E23E6F21500E58209 /* SurveyListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C4D23E6F21500E58209 /* SurveyListViewModelTests.swift */; };
 		9D389C5023E6F22E00E58209 /* SurveyModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D389C4F23E6F22E00E58209 /* SurveyModelMock.swift */; };
@@ -62,6 +63,7 @@
 		1CBA801AA27BB97596C8F15B /* Pods-SurveyAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SurveyAppTests/Pods-SurveyAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		43A1A2E0352C0976063CC3B3 /* Pods_SurveyAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SurveyAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		841850AD23AFF31AACF7D13B /* Pods-SurveyAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyAppTests.release.xcconfig"; path = "Target Support Files/Pods-SurveyAppTests/Pods-SurveyAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		9D221D1C23FA9C1D002A4879 /* SurveyListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListCoordinator.swift; sourceTree = "<group>"; };
 		9D389C4323E4664400E58209 /* TakeSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeSurveyViewController.swift; sourceTree = "<group>"; };
 		9D389C4D23E6F21500E58209 /* SurveyListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListViewModelTests.swift; sourceTree = "<group>"; };
 		9D389C4F23E6F22E00E58209 /* SurveyModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyModelMock.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				9DA4981F23E1DFF300C77592 /* AppCoordinator.swift */,
+				9D221D1C23FA9C1D002A4879 /* SurveyListCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				9DF609D423F7211000B63B05 /* UIStoryboardExtension.swift in Sources */,
 				9DA4983E23E418AB00C77592 /* APIRouterConfiguration.swift in Sources */,
 				9D389C4423E4664400E58209 /* TakeSurveyViewController.swift in Sources */,
+				9D221D1D23FA9C1D002A4879 /* SurveyListCoordinator.swift in Sources */,
 				9DA4980E23E1DF4700C77592 /* Constants.swift in Sources */,
 				9DF609CB23F70A4800B63B05 /* OAuthModel.swift in Sources */,
 				9DA4983D23E418AB00C77592 /* APIRouter.swift in Sources */,
