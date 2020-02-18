@@ -33,7 +33,7 @@
 		9DA4982F23E3CDC900C77592 /* SurveyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4982A23E3CDC900C77592 /* SurveyService.swift */; };
 		9DA4983D23E418AB00C77592 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4983B23E418AB00C77592 /* APIRouter.swift */; };
 		9DA4983E23E418AB00C77592 /* APIRouterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4983C23E418AB00C77592 /* APIRouterConfiguration.swift */; };
-		9DEBB43123FBC7A700B391D0 /* UIPageControl+CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBB43023FBC7A700B391D0 /* UIPageControl+CustomPageControl.swift */; };
+		9DEBB43123FBC7A700B391D0 /* UIPageControl+AddBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBB43023FBC7A700B391D0 /* UIPageControl+AddBorder.swift */; };
 		9DF609C823F6E5B200B63B05 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF609C723F6E5B200B63B05 /* NetworkError.swift */; };
 		9DF609CB23F70A4800B63B05 /* OAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF609CA23F70A4800B63B05 /* OAuthModel.swift */; };
 		9DF609CD23F70A5800B63B05 /* OAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF609CC23F70A5800B63B05 /* OAuthService.swift */; };
@@ -92,7 +92,7 @@
 		9DA4982A23E3CDC900C77592 /* SurveyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyService.swift; sourceTree = "<group>"; };
 		9DA4983B23E418AB00C77592 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		9DA4983C23E418AB00C77592 /* APIRouterConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouterConfiguration.swift; sourceTree = "<group>"; };
-		9DEBB43023FBC7A700B391D0 /* UIPageControl+CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPageControl+CustomPageControl.swift"; sourceTree = "<group>"; };
+		9DEBB43023FBC7A700B391D0 /* UIPageControl+AddBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPageControl+AddBorder.swift"; sourceTree = "<group>"; };
 		9DF609C723F6E5B200B63B05 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		9DF609CA23F70A4800B63B05 /* OAuthModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthModel.swift; sourceTree = "<group>"; };
 		9DF609CC23F70A5800B63B05 /* OAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthService.swift; sourceTree = "<group>"; };
@@ -325,7 +325,7 @@
 				9DF609D123F720C100B63B05 /* UIViewController+ShowErrorAlert.swift */,
 				9DF609D323F7211000B63B05 /* UIStoryboard+InitialViewController.swift */,
 				9D53ACF923F82D8100F29547 /* URLComponents+SetQueryItems.swift */,
-				9DEBB43023FBC7A700B391D0 /* UIPageControl+CustomPageControl.swift */,
+				9DEBB43023FBC7A700B391D0 /* UIPageControl+AddBorder.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -591,7 +591,7 @@
 				9DF609D423F7211000B63B05 /* UIStoryboard+InitialViewController.swift in Sources */,
 				9DA4983E23E418AB00C77592 /* APIRouterConfiguration.swift in Sources */,
 				9D389C4423E4664400E58209 /* TakeSurveyViewController.swift in Sources */,
-				9DEBB43123FBC7A700B391D0 /* UIPageControl+CustomPageControl.swift in Sources */,
+				9DEBB43123FBC7A700B391D0 /* UIPageControl+AddBorder.swift in Sources */,
 				9D221D1D23FA9C1D002A4879 /* SurveyListCoordinator.swift in Sources */,
 				9DA4980E23E1DF4700C77592 /* Constants.swift in Sources */,
 				9DF609CB23F70A4800B63B05 /* OAuthModel.swift in Sources */,

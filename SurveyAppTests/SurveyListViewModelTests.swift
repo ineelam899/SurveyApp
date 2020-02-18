@@ -27,6 +27,13 @@ class SurveyListViewModelTests: XCTestCase {
             //THEN
             expectation.fulfill()
         }
+        viewModel.errorBlock = { error in
+            if(error.isOffline){
+                //THEN
+                expectation.fulfill()
+            }
+            print(error)
+        }
         //WHEN
         viewModel.load()
         wait(for: [expectation], timeout: 20)
