@@ -30,6 +30,10 @@ class SurveyServiceTests: XCTestCase {
                 //THEN
                 expectation.fulfill()
             case .failure(let error):
+                if(error.isOffline){
+                    //THEN
+                    expectation.fulfill()
+                }
                 print(error)
             }
         }

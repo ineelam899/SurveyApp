@@ -6,10 +6,17 @@
 //  Copyright © 2020 Neelam Shehzadi. All rights reserved.
 //
 
+import Foundation
+
 enum NetworkError: Error {
     case badURL
     case badJSON
     case generic(Error?)
+    
+    var isOffline: Bool {
+        let code = (self as NSError).code
+        return (code == 0)
+    }
     
     var description: String {
         switch self {
