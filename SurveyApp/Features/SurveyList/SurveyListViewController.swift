@@ -12,6 +12,7 @@ class SurveyListViewController: UIViewController {
     //MARK:- IBOutlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     //MARK:- Data Members
     private let surveyCellIdentifier = "SurveyListCell"
@@ -23,7 +24,8 @@ class SurveyListViewController: UIViewController {
     //MARK:- Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let angle = CGFloat.pi/2
+        pageControl.transform = CGAffineTransform(rotationAngle: angle)
         activityIndicatorView.center = self.view.center
         fetchData()
     }
@@ -33,6 +35,8 @@ class SurveyListViewController: UIViewController {
         activityIndicatorView.startAnimating()
         viewModel.surveyListUpdatedBlock = { [weak self] in
             DispatchQueue.main.async {
+                self?.pageControl.numberOfPages = self?.viewModel.numberOfRows ?? 0
+                self?.pageControl.addBorder(borderColor: .white, borderWidth: 1)
                 self?.activityIndicatorView.stopAnimating()
                 self?.tableView.reloadData()
             }
@@ -48,6 +52,7 @@ class SurveyListViewController: UIViewController {
     
     //MARK:- IBActions
     @IBAction func didPressRefresh(_ sender: Any) {
+        viewModel.currentPage = 1
         fetchData()
     }
     
@@ -75,6 +80,8 @@ extension SurveyListViewController: UITableViewDelegate, UITableViewDataSource{
 extension SurveyListViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let row = round(tableView.contentOffset.y/tableView.frame.size.height)
+        pageControl.currentPage = Int(row)
+        
         let lastElement = viewModel.numberOfRows - 1
         if !viewModel.isLastPage && !activityIndicatorView.isAnimating && Int(row) == lastElement {
             viewModel.currentPage += 1

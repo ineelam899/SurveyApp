@@ -18,7 +18,12 @@ class SurveyListViewModel {
     
     var isLastPage: Bool = false
     var currentPage: Int {
-        set { page = newValue }
+        set {
+            page = newValue
+            if(page == 1){
+                surveys.removeAll()
+            }
+        }
         get { page }
     }
     
