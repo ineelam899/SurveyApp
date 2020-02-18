@@ -32,7 +32,7 @@ class OAuthService: OAuthServiceProtocol {
                 }
                 completion(.success(oAuth))
             case .failure(let error):
-                completion(.failure(.generic(error)))
+                completion(.failure(error))
             }
         }
     }

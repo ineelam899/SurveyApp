@@ -14,8 +14,13 @@ enum NetworkError: Error {
     case generic(Error?)
     
     var isOffline: Bool {
-        let code = (self as NSError).code
-        return (code == 0)
+        switch self {
+        case .generic(let error):
+            guard let error = error else { return false }
+            return (error._code == -1009)
+        case .badURL, .badJSON:
+            return false
+        }
     }
     
     var description: String {

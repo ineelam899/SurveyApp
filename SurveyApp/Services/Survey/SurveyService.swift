@@ -33,7 +33,7 @@ class SurveyService: SurveyServiceProtocol {
                 }
                 completion(.success(surveys))
             case .failure(let error):
-                completion(.failure(.generic(error)))
+                completion(.failure(error))
             }
         }
     }
